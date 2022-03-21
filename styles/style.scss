@@ -9,8 +9,12 @@ body {
   color: white;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  text-align: center;
   letter-spacing: 3px;
+}
+
+.website-content-margin-rule {
+  width: 85%;
+  margin: auto;
 }
 
 h4 {
@@ -26,6 +30,7 @@ p {
 // HERO SECTION
 
 #hero {
+  text-align: center;
   height: 80vh;
 }
 
@@ -179,6 +184,25 @@ p {
   color: white;
 }
 
+// my work section
+
+h2 {
+  font-size: clamp(2em, 4vw, 5em);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.project-img-container img {
+  border: 1px solid white;
+  width: 100%;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
 @media (min-width: 800px) {
   .navbtn-container {
     width: 3rem;
@@ -195,6 +219,10 @@ p {
     }
   }
 
+  .projects-container {
+    grid-template-columns: repeat(2, minmax(15rem, 1fr));
+    column-gap: 5rem;
+  }
   .nav-container {
     width: 40vw;
   }

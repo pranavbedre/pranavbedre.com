@@ -10,8 +10,12 @@ body {
   color: white;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  text-align: center;
   letter-spacing: 3px;
+}
+
+.website-content-margin-rule {
+  width: 85%;
+  margin: auto;
 }
 
 h4 {
@@ -25,6 +29,7 @@ p {
 }
 
 #hero {
+  text-align: center;
   height: 80vh;
 }
 
@@ -215,6 +220,26 @@ p {
   color: white;
 }
 
+h2 {
+  font-size: clamp(2em, 4vw, 5em);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projects-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.project-img-container img {
+  border: 1px solid white;
+  width: 100%;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
 @media (min-width: 800px) {
   .navbtn-container {
     width: 3rem;
@@ -227,6 +252,12 @@ p {
   }
   .navbtn-container .line:nth-child(1) {
     margin-top: 30%;
+  }
+  .projects-container {
+    -ms-grid-columns: (minmax(15rem, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(15rem, 1fr));
+    -webkit-column-gap: 5rem;
+            column-gap: 5rem;
   }
   .nav-container {
     width: 40vw;
